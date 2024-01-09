@@ -53,7 +53,7 @@ pub struct VerifierKey<E: Pairing> {
     pub h_mask_random: Vec<E::G2Affine>,
 }
 
-#[derive(CanonicalSerialize, CanonicalDeserialize, Clone, Debug)]
+#[derive(CanonicalSerialize, CanonicalDeserialize, Clone, Debug, Default)]
 /// commitment
 pub struct Commitment<E: Pairing> {
     /// number of variables
@@ -62,7 +62,7 @@ pub struct Commitment<E: Pairing> {
     pub g_product: E::G1Affine,
 }
 
-#[derive(CanonicalSerialize, CanonicalDeserialize, Clone, Debug)]
+#[derive(CanonicalSerialize, CanonicalDeserialize, Clone, Debug, Default)]
 /// proof of opening
 pub struct Proof<E: Pairing> {
     /// Evaluation of quotients
